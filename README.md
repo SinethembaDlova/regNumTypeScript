@@ -21,8 +21,9 @@ This is how the application looks like and you can get to play around the applic
 
 ## Tech Stack
 
-The technology that we are using on the application its MongoDB, ExpressJS and NodeJS.
+The technology that we are using on the application its TypeScript, MongoDB, ExpressJS and NodeJS.
 
+- TypeScript is a superset typed JavaScript that compiles to vanilla JavaScript.
 - MongoDB is responsible for ensuring that our data its persistent. To learn more about MongoDB please read up at https://www.mongodb.com.   
 - ExpressJS is a NodeJS framework that is responsible for routing with the middle-wares. To learn more about ExpressJS please read up at https://expressjs.com.
 - NodeJS is our server for the application. To learn more about NodeJS please read up at https://nodejs.org.
