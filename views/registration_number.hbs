@@ -1,0 +1,58 @@
+<div class="container text-center">
+    <form action="/" method="post">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p><strong>Please enter a registration plate:</strong></p>
+
+                {{#if messages.error}}
+                  <div class="alert alert-danger" role="alert">
+                      {{messages.error}}
+                  </div>
+                {{/if}}
+
+                {{#if messages.success}}
+                  <div class="alert alert-success" role="alert">
+                      {{messages.success}}
+                  </div>
+                {{/if}}
+
+                <div class="input-group centre-block">
+                    <input type="text" class="form-control text-center" name="takeReg" style='text-transform:uppercase'>
+                    <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">Add</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form  action="/filter" method="post">
+      <!--Dropdown list  -->
+      <div class="row bg-light">
+          <div class="col-md-12 form-inline d-flex justify-content-end">
+              <select class="custom-select my-1" type="submit" name="filter">
+                <option value="">All registration plates</option>
+                <option value="CA">Cape Town</option>
+                <option value="CJ">Paarl</option>
+                <option value="CL">Stellenbosch</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+      </div>
+      <!-- </div>Dropdown list ends   -->
+      <hr>
+    </form>
+
+    <!-- /line-->
+    <!--My number plate tempate starts  -->
+
+    <div class="row">
+      {{#each regPlate}}
+          <div class="col-md-3 col-lg-2 mt-4">
+              <li id="disk">{{regNum}}</li>
+          </div>
+      {{/each}}
+  </div>
+</div>
+<!--Number plates ends  -->
